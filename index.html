@@ -1,0 +1,1210 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muh STORE</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <div class="main-header">
+        <div class="container">
+            <!-- Cart positioned on the left -->
+            <div class="cart">
+                <a href="#" class="cart-icon" data-page="cart">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count" id="cartCount">0</span>
+                </a>
+                <span>عربة التسوق</span>
+            </div>
+            
+            <!-- Centered logo at top -->
+            <div class="centered-logo">
+                <a href="#" data-page="home">
+                    <img src="https://i.imgur.com/aC86Jux.png" alt="Muh STORE">
+                </a>
+            </div>
+            
+            <!-- Simple line separator -->
+            <div class="separator-line"></div>
+            
+            <!-- Search bar below the line -->
+            <div class="search-bar">
+                <form id="searchForm">
+                    <input type="text" id="searchInput" placeholder="بحث عن منتجات...">
+                    <button type="submit"><i class="fas fa-search"></i></button>
+                </form>
+            </div>
+            
+            <!-- Sidebar toggle button -->
+            <button id="sidebarToggle" class="sidebar-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <!-- Sidebar Navigation -->
+            <div class="sidebar" id="sidebar">
+                <div class="sidebar-header">
+                    <div class="logo">
+                        <a href="#" data-page="home">
+                            <img src="https://i.imgur.com/aC86Jux.png" alt="Muh STORE" style="width: 150px; height: 50px;">
+                        </a>
+                    </div>
+                    <button id="closeSidebar" class="close-sidebar">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                
+                <div class="sidebar-content">
+                    <nav class="sidebar-nav">
+                        <ul>
+                            <li>
+                                <a href="#" data-page="home">
+                                    <i class="fas fa-home"></i>
+                                    <span>الصفحة الرئيسية</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" data-page="products">
+                                    <i class="fas fa-box"></i>
+                                    <span>أحدث المنتجات</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" data-page="products" data-category="gaming-pcs">
+                                    <i class="fas fa-gamepad"></i>
+                                    <span>تجميعات جاهزة</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" data-page="products" data-category="pc-components">
+                                    <i class="fas fa-microchip"></i>
+                                    <span>مكونات الكمبيوتر</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" data-page="products" data-category="monitors">
+                                    <i class="fas fa-desktop"></i>
+                                    <span>شاشات</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" data-page="products" data-category="ups">
+                                    <i class="fas fa-plug"></i>
+                                    <span>مجهز الطاقة</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" data-page="products" data-category="accessories">
+                                    <i class="fas fa-keyboard"></i>
+                                    <span>إكسسوارات</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" data-page="about">
+                                    <i class="fas fa-info-circle"></i>
+                                    <span>من نحن</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                
+                <div class="sidebar-footer">
+                    <div class="dark-mode-toggle">
+                        <span>الوضع الداكن</span>
+                        <label class="switch">
+                            <input type="checkbox" id="darkModeToggleSidebar">
+                            <span class="slider round"></span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Overlay for sidebar on mobile -->
+            <div class="sidebar-overlay" id="sidebarOverlay"></div>
+        </div>  
+    </div>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Pages Container -->
+        <div id="pagesContainer">
+            <!-- Home Page -->
+            <div id="page-home" class="page">
+                <!-- Hero Banner -->
+                <section class="hero">
+                    <div class="container">
+                        <div class="hero-content">
+                            <h1>أفضل المنتجات التقنية بأسعار مناسبة</h1>
+                            <p>اكتشف مجموعتنا الواسعة من منتجات الكمبيوتر والإلكترونيات</p>
+                            <a href="#" data-page="products" class="btn-primary">تسوق الآن</a>
+                        </div>
+                        <div class="hero-image">
+                            <img src="https://i.ibb.co/MDmzqm56/55f5d049-2e36-4c34-95e3-8e25a17b7b8d-removebg-preview.png" alt="Electronics">
+                        </div>
+                    </div>
+                </section>
+    
+                <!-- About Us Page -->
+                <div id="page-about" class="page">
+                    <section class="about-section">
+                        <div class="container">
+                            <h1 class="page-title">من نحن</h1>
+                            
+                            <div class="about-content">
+                                <div class="about-image">
+                                    <img src="https://cdn.discordapp.com/attachments/1188199119056019526/1361272043516985345/Dark_Blue_and_Orange_Online_Shop_Logo-removebg-preview.png" alt="Muh STORE">
+                                </div>
+                                
+                                <div class="about-text">
+                                    <h2>متجر محمد للإلكترونيات</h2>
+                                    <p>متخصصون في بيع أجهزة الكمبيوتر والإلكترونيات بأفضل الأسعار وأعلى جودة.</p>
+                                    
+                                    <p>نقدم لكم:</p>
+                                    <ul>
+                                        <li>تشكيلة واسعة من أحدث المنتجات</li>
+                                        <li>أسعار تنافسية</li>
+                                        <li>ضمان على جميع المنتجات</li>
+                                        <li>خدمة توصيل لجميع المحافظات</li>
+                                        <li>دعم فني متميز</li>
+                                    </ul>
+                                    
+                                    <p>هدفنا هو تقديم أفضل تجربة تسوق لعملائنا الكرام من خلال توفير منتجات عالية الجودة بأسعار مناسبة.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+                <!-- Categories Section -->
+                <section class="categories">
+                    <div class="container">
+                        <div class="section-header">
+                            <h2>تصفح الأقسام</h2>
+                        </div>
+                        <div class="categories-grid">
+                            <a href="#" data-page="products" data-category="gaming-pcs" class="category-card">
+                                <div class="category-icon">
+                                    <i class="fas fa-gamepad"></i>
+                                </div>
+                                <h3>تجميعات جاهزة</h3>
+                            </a>
+                            <a href="#" data-page="products" data-category="pc-components" class="category-card">
+                                <div class="category-icon">
+                                    <i class="fas fa-microchip"></i>
+                                </div>
+                                <h3>مكونات الكمبيوتر</h3>
+                            </a>
+                            <a href="#" data-page="products" data-category="monitors" class="category-card">
+                                <div class="category-icon">
+                                    <i class="fas fa-desktop"></i>
+                                </div>
+                                <h3>شاشات</h3>
+                            </a>
+                            <a href="#" data-page="products" data-category="ups" class="category-card">
+                                <div class="category-icon">
+                                    <i class="fas fa-plug"></i>
+                                </div>
+                                <h3>مجهز الطاقة</h3>
+                            </a>
+                            <a href="#" data-page="products" data-category="accessories" class="category-card">
+                                <div class="category-icon">
+                                    <i class="fas fa-keyboard"></i>
+                                </div>
+                                <h3>إكسسوارات</h3>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+                
+                
+                <!-- Latest Products -->
+                <section class="latest-products">
+                    <div class="container">
+                        <div class="section-header">
+                            <h2>أحدث المنتجات</h2>
+                            <a href="#" data-page="products" class="view-all">عرض الكل</a>
+                        </div>
+                        <div class="products-grid" id="latestProducts">
+                            <!-- Products will be loaded dynamically via JavaScript -->
+                            <div class="loading-spinner"></div>
+                        </div>
+                    </div>
+                </section>
+                
+                <!-- Newsletter -->
+                <section class="newsletter">
+                    <div class="container">
+                    </div>
+                </section>
+            </div>
+            
+            <!-- Products Page -->
+            <div id="page-products" class="page">
+                <section class="products-section">
+                    <div class="container">
+                        <div class="products-grid-container">
+                            <aside class="filters">
+                                <div class="filter-header">
+                                    <h3>الفلترة</h3>
+                                    <button id="closeFilters" class="close-filters">
+                                        <i class="fas fa-times"></i>
+                                    </button>
+                                </div>
+                                
+                                <div class="filter-section">
+                                    <h4>الفئات</h4>
+                                    <div class="filter-options" id="categoryFilters">
+                                        <label class="filter-option">
+                                            <input type="radio" name="category" value="all" checked>
+                                            <span>الكل</span>
+                                        </label>
+                                        <label class="filter-option">
+                                            <input type="radio" name="category" value="gaming-pcs">
+                                            <span>تجميعات جاهزة</span>
+                                        </label>
+                                        <label class="filter-option">
+                                            <input type="radio" name="category" value="pc-components">
+                                            <span>مكونات الكمبيوتر</span>
+                                        </label>
+                                        <!-- PC Components Subcategories -->
+                                        <label class="filter-option subcategory-filter">
+                                            <input type="radio" name="category" value="processors">
+                                            <span>- المعالجات</span>
+                                        </label>
+                                        <label class="filter-option subcategory-filter">
+                                            <input type="radio" name="category" value="motherboards">
+                                            <span>- اللوحات الأم</span>
+                                        </label>
+                                        <label class="filter-option subcategory-filter">
+                                            <input type="radio" name="category" value="graphics-cards">
+                                            <span>- كروت الشاشة</span>
+                                        </label>
+                                        <label class="filter-option subcategory-filter">
+                                            <input type="radio" name="category" value="memory">
+                                            <span>- الذاكرة</span>
+                                        </label>
+                                        <label class="filter-option subcategory-filter">
+                                            <input type="radio" name="category" value="storage">
+                                            <span>- أجهزة التخزين</span>
+                                        </label>
+                                        <label class="filter-option subcategory-filter">
+                                            <input type="radio" name="category" value="power-supply">
+                                            <span>- مزودات الطاقة</span>
+                                        </label>
+                                        <label class="filter-option subcategory-filter">
+                                            <input type="radio" name="category" value="cooling">
+                                            <span>- التبريد</span>
+                                        </label>
+                                        <label class="filter-option subcategory-filter">
+                                            <input type="radio" name="category" value="cases">
+                                            <span>- كيسات</span>
+                                        </label>
+                                        
+                                        <label class="filter-option">
+                                            <input type="radio" name="category" value="monitors">
+                                            <span>شاشات</span>
+                                        </label>
+                                        <label class="filter-option">
+                                            <input type="radio" name="category" value="ups">
+                                            <span>مجهز الطاقة</span>
+                                        </label>
+
+                                        <label class="filter-option subcategory-filter">
+                                            <input type="radio" name="category" value="ups-online">
+                                            <span>- اونلاين</span>
+                                        </label>
+                                        <label class="filter-option subcategory-filter">
+                                            <input type="radio" name="category" value="ups-offline">
+                                            <span>- اوفلاين</span>
+                                        </label>
+                                        <label class="filter-option subcategory-filter">
+                                            <input type="radio" name="category" value="ups-inverters">
+                                            <span>- عاكسات</span>
+                                        </label>
+                                        <label class="filter-option subcategory-filter">
+                                            <input type="radio" name="category" value="ups-battrey">
+                                            <span>- بطاريات</span>
+                                        </label>
+
+                                        
+                                        <label class="filter-option">
+                                            <input type="radio" name="category" value="accessories">
+                                            <span>إكسسوارات</span>
+                                        </label>
+                                        <!-- Accessories Subcategories -->
+                                        <label class="filter-option subcategory-filter">
+                                            <input type="radio" name="category" value="chairs">
+                                            <span>- كراسي</span>
+                                        </label>
+                                        <label class="filter-option subcategory-filter">
+                                            <input type="radio" name="category" value="mouse">
+                                            <span>- ماوس</span>
+                                        </label>
+                                        <label class="filter-option subcategory-filter">
+                                            <input type="radio" name="category" value="keyboard">
+                                            <span>- لوحة مفاتيح</span>
+                                        </label>
+                                        <label class="filter-option subcategory-filter">
+                                            <input type="radio" name="category" value="tables">
+                                            <span>- طاولات</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                
+                                
+                                <div class="filter-section">
+                                    <h4>الترتيب</h4>
+                                    <div class="filter-options" id="sortOptions">
+                                        <label class="filter-option">
+                                            <input type="radio" name="sort" value="newest" checked>
+                                            <span>الأحدث</span>
+                                        </label>
+                                        <label class="filter-option">
+                                            <input type="radio" name="sort" value="price-low">
+                                            <span>السعر: من الأقل للأعلى</span>
+                                        </label>
+                                        <label class="filter-option">
+                                            <input type="radio" name="sort" value="price-high">
+                                            <span>السعر: من الأعلى للأقل</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </aside>
+                            
+                            <div class="products-container">
+                                <div class="products-header">
+                                    <div class="products-title">
+                                        <h1 id="productsTitle">المنتجات</h1>
+                                        <p id="productsCount">تم العثور على <span>0</span> منتج</p>
+                                    </div>
+                                    <div class="products-actions">
+                                        <button id="toggleFilters" class="toggle-filters">
+                                            <i class="fas fa-filter"></i>
+                                            <span>الفلترة</span>
+                                        </button>
+                                        <div class="view-switcher">
+                                            <button class="view-btn grid-view active" data-view="grid">
+                                                <i class="fas fa-th"></i>
+                                            </button>
+                                            <button class="view-btn list-view" data-view="list">
+                                                <i class="fas fa-list"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div id="productsGrid" class="products-grid">
+                                    <!-- Products will be loaded dynamically via JavaScript -->
+                                    <div class="loading-spinner"></div>
+                                </div>
+                                
+                                <!-- Empty state -->
+                                <div id="emptyState" class="empty-state" style="display: none;">
+                                    <i class="fas fa-search"></i>
+                                    <h2>لم يتم العثور على منتجات</h2>
+                                    <p>جرب تغيير معايير البحث أو الفلترة</p>
+                                    <a href="#" data-page="products" class="btn-primary">عرض كل المنتجات</a>
+                                </div>
+                                
+                                <!-- Pagination -->
+                                <div class="pagination" id="pagination">
+                                    <!-- Pagination will be generated dynamically -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            
+            <!-- Product Detail Page -->
+            <div id="page-product-detail" class="page">
+                <section class="product-detail-section">
+                    <div class="container">
+                        <div class="product-detail-container" id="productDetailContainer">
+                            <!-- Product details will be loaded dynamically via JavaScript -->
+                            <div class="loading-spinner centered"></div>
+                        </div>
+                        
+                        <div class="product-tabs">
+                            <div class="tabs-header">
+                                <button class="tab-btn" data-tab="specifications">المواصفات</button>
+                            </div>
+                            <div class="tabs-content">
+                                <div class="tab-content" id="specifications">
+                                    <table class="specs-table" id="specsTable">
+                                        <!-- Product specifications will be loaded dynamically -->
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <section class="related-products-section">
+                            <div class="section-header">
+                                <h2>منتجات ذات صلة</h2>
+                            </div>
+                            <div class="products-grid" id="relatedProducts">
+                                <!-- Related products will be loaded dynamically via JavaScript -->
+                            </div>
+                        </section>
+                    </div>
+                </section>
+            </div>
+            
+            <!-- Cart Page -->
+            <div id="page-cart" class="page">
+                <section class="cart-section">
+                    <div class="container">
+                        <h1 class="page-title">عربة التسوق</h1>
+                        
+                        <!-- Empty cart message -->
+                        <div id="emptyCart" class="empty-cart" style="display: none;">
+                            <i class="fas fa-shopping-cart"></i>
+                            <h2>عربة التسوق فارغة</h2>
+                            <p>لم تقم بإضافة أي منتجات إلى عربة التسوق بعد.</p>
+                            <a href="#" data-page="products" class="btn-primary">تسوق الآن</a>
+                        </div>
+                        
+                        <!-- Cart content -->
+                        <div id="cartContent" class="cart-content">
+                            <div class="cart-loading" id="cartLoading">
+                                <div class="loading-spinner"></div>
+                                <p>جاري تحميل عربة التسوق...</p>
+                            </div>
+                            
+                            <div class="cart-grid" id="cartGrid" style="display: none;">
+                                <div class="cart-items">
+                                    <div class="cart-header">
+                                        <div class="cart-product-header">المنتج</div>
+                                        <div class="cart-price-header">السعر</div>
+                                        <div class="cart-quantity-header">الكمية</div>
+                                        <div class="cart-total-header">المجموع</div>
+                                        <div class="cart-actions-header"></div>
+                                    </div>
+                                    
+                                    <div id="cartItems" class="cart-items-list">
+                                        <!-- Cart items will be loaded dynamically -->
+                                    </div>
+                                </div>
+                                
+                                <div class="cart-sidebar">
+                                    <div class="cart-summary">
+                                        <h3>ملخص الطلب</h3>
+                                        
+                                        <div class="summary-item">
+                                            <span>إجمالي المنتجات:</span>
+                                            <span id="subtotal">0 IQD</span>
+                                        </div>
+                                        
+                                        <div class="summary-item">
+                                            <span>رسوم التوصيل:</span>
+                                            <span id="shipping">5,000 IQD</span>
+                                        </div>
+                                        
+                                        <div class="summary-item total">
+                                            <span>المجموع:</span>
+                                            <span id="total">5,000 IQD</span>
+                                        </div>
+                                        
+                                        <button id="checkoutBtn" class="btn-primary checkout-btn">
+                                            <i class="fas fa-credit-card"></i>
+                                            إتمام الطلب
+                                        </button>
+                                        
+                                        <a href="#" data-page="products" class="continue-shopping">
+                                            <i class="fas fa-arrow-right"></i>
+                                            مواصلة التسوق
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            
+            <!-- Admin Login Page -->
+            <div id="page-admin-login" class="page">
+                <div class="admin-login-container">
+                    <div class="admin-login-form">
+                        <div class="admin-login-header">
+                            <h1>تسجيل الدخول للوحة الإدارة</h1>
+                        </div>
+                        
+                        <form id="adminLoginForm">
+                            <div class="form-group">
+                                <label for="username">اسم المستخدم</label>
+                                <div class="input-with-icon">
+                                    <i class="fas fa-user"></i>
+                                    <input type="text" id="username" name="username" required>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="password">كلمة المرور</label>
+                                <div class="input-with-icon">
+                                    <i class="fas fa-lock"></i>
+                                    <input type="password" id="password" name="password" required>
+                                </div>
+                            </div>
+                            
+                            <div id="loginError" class="error-message" style="display: none;"></div>
+                            
+                            <button type="submit" class="btn-primary">
+                                <i class="fas fa-sign-in-alt"></i>
+                                تسجيل الدخول
+                            </button>
+                        </form>
+                        
+                        <div class="login-footer">
+                            <a href="#" data-page="home">
+                                <i class="fas fa-arrow-right"></i>
+                                العودة إلى الموقع
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Admin Panel Page -->
+            <div id="page-admin" class="page">
+                <div class="admin-panel">
+                    <!-- Admin Header -->
+                    <header class="admin-header">
+                        <div class="admin-logo">
+                            <h1>لوحة الإدارة</h1>
+                        </div>
+                        
+                        <div class="admin-controls">
+                            <a href="#" data-page="home" class="view-site-btn" target="_blank">
+                                <i class="fas fa-external-link-alt"></i>
+                                عرض الموقع
+                            </a>
+                            
+                            <div class="admin-user-dropdown">
+                                <button id="adminUserBtn" class="admin-user-btn">
+                                    <i class="fas fa-user-circle"></i>
+                                    <span id="adminUsername">المدير</span>
+                                    <i class="fas fa-chevron-down"></i>
+                                </button>
+                                <div class="admin-dropdown-menu">
+                                    <a href="#" id="logoutBtn">
+                                        <i class="fas fa-sign-out-alt"></i>
+                                        تسجيل الخروج
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </header>
+                    
+                    <!-- Admin Main Content -->
+                    <div class="admin-content">
+                        <!-- Sidebar -->
+                        <aside class="admin-sidebar">
+                            <nav class="admin-nav">
+                                <ul>
+                                    <li>
+                                        <a href="#dashboard" class="active" data-section="dashboard">
+                                            <i class="fas fa-tachometer-alt"></i>
+                                            لوحة التحكم
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#products" data-section="products">
+                                            <i class="fas fa-box"></i>
+                                            المنتجات
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#orders" data-section="orders">
+                                            <i class="fas fa-shopping-cart"></i>
+                                            الطلبات
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#settings" data-section="settings">
+                                            <i class="fas fa-cog"></i>
+                                            الإعدادات
+                                        </a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </aside>
+                        
+                        <!-- Main Content -->
+                        <main class="admin-main">
+                            <!-- Dashboard Section -->
+                            <section id="dashboard" class="admin-section active">
+                                <div class="section-header">
+                                    <h2><i class="fas fa-tachometer-alt"></i> لوحة التحكم</h2>
+                                </div>
+                                
+                                <div class="dashboard-stats">
+                                    <div class="stat-card">
+                                        <div class="stat-icon products">
+                                            <i class="fas fa-box"></i>
+                                        </div>
+                                        <div class="stat-content">
+                                            <h3>إجمالي المنتجات</h3>
+                                            <p id="totalProducts">0</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="stat-card">
+                                        <div class="stat-icon orders">
+                                            <i class="fas fa-shopping-cart"></i>
+                                        </div>
+                                        <div class="stat-content">
+                                            <h3>الطلبات</h3>
+                                            <p id="totalOrders">0</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="stat-card">
+                                        <div class="stat-icon stock">
+                                            <i class="fas fa-warehouse"></i>
+                                        </div>
+                                        <div class="stat-content">
+                                            <h3>المنتجات غير المتوفرة</h3>
+                                            <p id="outOfStock">0</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="dashboard-sections">
+                                    <div class="dashboard-section">
+                                        <div class="section-header">
+                                            <h3>أحدث الطلبات</h3>
+                                            <a href="#orders" class="view-all" data-section="orders">عرض الكل</a>
+                                        </div>
+                                        
+                                        <div class="recent-orders" id="recentOrders">
+                                            <div class="loading-spinner"></div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="dashboard-section">
+                                        <div class="section-header">
+                                            <h3>حالة المخزون</h3>
+                                            <a href="#products" class="view-all" data-section="products">عرض الكل</a>
+                                        </div>
+                                        
+                                        <div class="stock-status" id="stockStatus">
+                                            <div class="loading-spinner"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                            
+                            <!-- Products Section -->
+                            <section id="products" class="admin-section">
+                                <div class="section-header">
+                                    <h2><i class="fas fa-box"></i> المنتجات</h2>
+                                    <button id="addProductBtn" class="btn-primary">
+                                        <i class="fas fa-plus"></i>
+                                        إضافة منتج
+                                    </button>
+                                </div>
+                                
+                                <div class="products-controls">
+                                    <div class="search-box">
+                                        <input type="text" id="productSearch" placeholder="بحث في المنتجات...">
+                                        <button id="productSearchBtn"><i class="fas fa-search"></i></button>
+                                    </div>
+                                    
+                                    <div class="filter-box">
+                                        <select id="categoryFilter">
+                                            <option value="">كل الفئات</option>
+                                            <option value="gaming-pcs">تجميعات جاهزة</option>
+                                            <option value="pc-components">مكونات الكمبيوتر</option>
+                                            <option value="processors">المعالجات</option>
+                                            <option value="motherboards">اللوحات الأم</option>
+                                            <option value="graphics-cards">كروت الشاشة</option>
+                                            <option value="memory">الذاكرة</option>
+                                            <option value="storage">أجهزة التخزين</option>
+                                            <option value="power-supply">مزودات الطاقة</option>
+                                            <option value="cooling">التبريد</option>
+                                            <option value="cases">كيسات</option>
+                                            <option value="monitors">شاشات</option>
+                                            <option value="ups">مجهز الطاقة</option>
+                                            <option value="ups-online">- اونلاين</option>
+                                            <option value="ups-offline">- اوفلاين</option>
+                                            <option value="ups-inverters">- عاكسات</option>
+                                            <option value="ups-battrey">- بطاريات</option>
+                                            <option value="accessories">إكسسوارات</option>
+                                            <option value="chairs">كراسي</option>
+                                            <option value="mouse">ماوس</option>
+                                            <option value="keyboard">لوحة مفاتيح</option>
+                                            <option value="tables">طاولات</option>
+                                        </select>
+                                        
+                                        <select id="stockFilter">
+                                            <option value="">كل المنتجات</option>
+                                            <option value="in-stock">متوفر</option>
+                                            <option value="out-of-stock">غير متوفر</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                
+                                <div class="products-table-container">
+                                    <table class="products-table">
+                                        <thead>
+                                            <tr>
+                                                <th>الصورة</th>
+                                                <th>الاسم</th>
+                                                <th>السعر</th>
+                                                <th>المخزون</th>
+                                                <th>الفئة</th>
+                                                <th>الإجراءات</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="productsTableBody">
+                                            <tr>
+                                                <td colspan="7" class="loading-cell">
+                                                    <div class="loading-spinner"></div>
+                                                    <p>جاري تحميل المنتجات...</p>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                
+                                <div class="admin-pagination" id="productsPagination">
+                                    <!-- Pagination will be generated dynamically -->
+                                </div>
+                            </section>
+                            
+                            <!-- Orders Section -->
+                            <section id="orders" class="admin-section">
+                                <div class="section-header">
+                                    <h2><i class="fas fa-shopping-cart"></i> الطلبات</h2>
+                                </div>
+                                
+                                <div class="orders-controls">
+                                    <div class="search-box">
+                                        <input type="text" id="orderSearch" placeholder="بحث برقم الطلب أو اسم العميل...">
+                                        <button id="orderSearchBtn"><i class="fas fa-search"></i></button>
+                                    </div>
+                                    
+                                    <div class="filter-box">
+                                        <select id="orderStatusFilter">
+                                            <option value="">كل الحالات</option>
+                                            <option value="pending">قيد الانتظار</option>
+                                            <option value="processing">قيد المعالجة</option>
+                                            <option value="completed">مكتمل</option>
+                                            <option value="cancelled">ملغي</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                
+                                <div class="orders-table-container">
+                                    <table class="orders-table">
+                                        <thead>
+                                            <tr>
+                                                <th>رقم الطلب</th>
+                                                <th>التاريخ</th>
+                                                <th>العميل</th>
+                                                <th>المدينة</th>
+                                                <th>المبلغ</th>
+                                                <th>الحالة</th>
+                                                <th>الإجراءات</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="ordersTableBody">
+                                            <tr>
+                                                <td colspan="7" class="loading-cell">
+                                                    <div class="loading-spinner"></div>
+                                                    <p>جاري تحميل الطلبات...</p>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                
+                                <div class="admin-pagination" id="ordersPagination">
+                                    <!-- Pagination will be generated dynamically -->
+                                </div>
+                            </section>
+                            
+                            <!-- Settings Section -->
+                            <section id="settings" class="admin-section">
+                                <div class="section-header">
+                                    <h2><i class="fas fa-cog"></i> الإعدادات</h2>
+                                </div>
+                                
+                                <form id="settingsForm" class="settings-form">
+                                    <div class="settings-section">
+                                        <h3>إعدادات Discord Webhook</h3>
+                                        <div class="form-group">
+                                            <label for="discordWebhook">رابط Discord Webhook</label>
+                                            <input type="text" id="discordWebhook" name="discordWebhook" placeholder="https://discord.com/api/webhooks/...">
+                                            <p class="form-help">سيتم استخدام هذا الرابط لإرسال إشعارات الطلبات الجديدة إلى Discord</p>
+                                        </div>
+                                        
+                                        <div class="form-group">
+                                            <label>اختبار Webhook</label>
+                                            <button type="button" id="testWebhookBtn" class="btn-secondary">
+                                                <i class="fas fa-paper-plane"></i>
+                                                إرسال إشعار تجريبي
+                                            </button>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="settings-section">
+                                        <h3>إعدادات الأمان</h3>
+                                        <div class="form-group">
+                                            <label for="adminUsername">اسم المستخدم</label>
+                                            <input type="text" id="adminUsernameInput" name="adminUsername">
+                                        </div>
+                                        
+                                        <div class="form-group">
+                                            <label for="adminPassword">كلمة المرور</label>
+                                            <input type="password" id="adminPassword" name="adminPassword" placeholder="اترك فارغًا للاحتفاظ بكلمة المرور الحالية">
+                                        </div>
+                                        
+                                        <div class="form-group">
+                                            <label for="adminPasswordConfirm">تأكيد كلمة المرور</label>
+                                            <input type="password" id="adminPasswordConfirm" name="adminPasswordConfirm" placeholder="اترك فارغًا للاحتفاظ بكلمة المرور الحالية">
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="form-actions">
+                                        <button type="submit" class="btn-primary">
+                                            <i class="fas fa-save"></i>
+                                            حفظ الإعدادات
+                                        </button>
+                                    </div>
+                                </form>
+                            </section>
+                        </main>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>عن Muh STORE</h4>
+                    <p>متجر متخصص في بيع منتجات الكمبيوتر والإلكترونيات بأفضل الأسعار وأعلى جودة.</p>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/muhpcstore" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://t.me/muhbaqerstore" target="_blank" title="Telegram"><i class="fab fa-telegram"></i></a>
+                        <a href="https://www.facebook.com/share/18jf384J3F" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.tiktok.com/@muhpcstore" target="_blank" title="TikTok"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>تواصل معنا</h4>
+                    <ul class="contact-info">
+                        <li><a href="https://maps.app.goo.gl/H3Myq1QseehDkq1h7" target="_blank"><i class="fas fa-map-marker-alt"></i>بغداد, الدولعي, جسر الدباش</a></li>
+                        <li><a href="https://wa.me/9647713947134" target="_blank"><i class="fab fa-whatsapp"></i>07713947134  </a></li>
+                    </ul>
+                </div>
+            </div>
+    
+        </div>
+    </footer>
+    
+    <!-- Modals -->
+    <!-- Checkout Modal -->
+    <div class="modal" id="checkoutModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>إتمام الطلب</h2>
+                <button class="modal-close" id="closeCheckoutModal"><i class="fas fa-times"></i></button>
+            </div>
+            
+            <div class="modal-body">
+                <form id="checkoutForm">
+                    <div class="form-section">
+                        <h3>معلومات الشخصية</h3>
+                        <div class="form-group">
+                            <label for="name">الاسم الكامل*</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">رقم الهاتف*</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-section">
+                        <h3>عنوان التوصيل</h3>
+                        <div class="form-group">
+                            <label for="city">المدينة*</label>
+                            <select id="city" name="city" required>
+                                <option value="">اختر المدينة</option>
+                                <option value="بغداد">بغداد</option>
+                                <option value="البصرة">البصرة</option>
+                                <option value="الموصل">الموصل</option>
+                                <option value="أربيل">أربيل</option>
+                                <option value="كركوك">كركوك</option>
+                                <option value="النجف">النجف</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="area">المنطقة*</label>
+                            <input type="text" id="area" name="area" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="address">العنوان التفصيلي*</label>
+                            <textarea id="address" name="address" required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="notes">ملاحظات إضافية</label>
+                            <textarea id="notes" name="notes"></textarea>
+                        </div>
+                    </div>
+                    
+                    <div class="form-section">
+                        <h3>طريقة الدفع</h3>
+                        <div class="payment-methods">
+                            <label class="payment-method">
+                                <input type="radio" name="payment_method" value="cash" checked>
+                                <div class="payment-method-info">
+                                    <i class="fas fa-money-bill-wave"></i>
+                                    <div>
+                                        <span class="payment-method-name">الدفع عند الاستلام</span>
+                                        <span class="payment-method-desc">ادفع نقدًا عند استلام الطلب</span>
+                                    </div>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="form-section">
+                        <h3>ملخص الطلب</h3>
+                        <div class="order-summary" id="orderSummary">
+                            <!-- Order summary will be loaded dynamically -->
+                        </div>
+                    </div>
+                    
+                    <div class="form-actions">
+                        <button type="submit" class="btn-primary submit-order-btn">
+                            <i class="fas fa-check"></i>
+                            تأكيد الطلب
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Order Confirmation Modal -->
+    <div class="modal" id="confirmationModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>تم تأكيد الطلب</h2>
+                <button class="modal-close" id="closeConfirmationModal"><i class="fas fa-times"></i></button>
+            </div>
+            
+            <div class="modal-body">
+                <div class="order-success">
+                    <div class="success-icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <h3>شكراً لطلبك!</h3>
+                    <p>تم استلام طلبك بنجاح وسيتم التواصل معك قريباً لتأكيد الطلب والتوصيل.</p>
+                    
+                    <div class="order-details">
+                        <div class="order-detail-item">
+                            <span>رقم الطلب:</span>
+                            <span id="orderNumber"></span>
+                        </div>
+                        <div class="order-detail-item">
+                            <span>تاريخ الطلب:</span>
+                            <span id="orderDate"></span>
+                        </div>
+                        <div class="order-detail-item">
+                            <span>المبلغ الإجمالي:</span>
+                            <span id="orderTotal"></span>
+                        </div>
+                    </div>
+                    
+                    <a href="#" data-page="home" class="btn-primary">
+                        <i class="fas fa-home"></i>
+                        العودة للرئيسية
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Add/Edit Product Modal -->
+    <div id="productModal" class="modal">
+        <div class="modal-content large-modal">
+            <div class="modal-header">
+                <h2 id="productModalTitle">إضافة منتج جديد</h2>
+                <button class="modal-close">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form id="productForm">
+                    <input type="hidden" id="productId" name="id">
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="productPrice">السعر*</label>
+                            <input type="number" id="productPrice" name="price" min="0" step="1" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="productStock">المخزون*</label>
+                            <input type="number" id="productStock" name="stock" min="0" step="1" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="productName">اسم المنتج*</label>
+                        <input type="text" id="productName" name="name" required>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="productBrand">العلامة التجارية*</label>
+                            <input type="text" id="productBrand" name="brand" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="productCategory">الفئة*</label>
+                            <select id="productCategory" name="category" required>
+                                <option value="">اختر الفئة</option>
+                                <option value="gaming-pcs">تجميعات جاهزة</option>
+                                <option value="pc-components">مكونات الكمبيوتر</option>
+                                <option value="processors">المعالجات</option>
+                                <option value="motherboards">اللوحات الأم</option>
+                                <option value="graphics-cards">كروت الشاشة</option>
+                                <option value="memory">الذاكرة</option>
+                                <option value="storage"> التخزين</option>
+                                <option value="power-supply">مزودات الطاقة</option>
+                                <option value="cooling">التبريد</option>
+                                <option value="cases">كيسات</option>
+                                <option value="monitors">شاشات</option>
+                                <option value="ups">مجهز الطاقة</option>
+                                <option value="accessories">إكسسوارات</option>
+                                <option value="chairs">كراسي</option>
+                                <option value="mouse">ماوس</option>
+                                <option value="keyboard">لوحة مفاتيح</option>
+                                <option value="tables">طاولات</option>
+                                <option value="ups-online">اونلاين</option>
+                                <option value="ups-offline">اوفلاين</option>
+                                <option value="ups-inverters">عاكسات</option>
+                                <option value="ups-battrey">- بطاريات</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    
+                    <div class="form-section">
+                        <h3>صور المنتج</h3>
+                        <div class="product-images-uploader">
+                            <div class="image-upload-box">
+                                <input type="text" id="imageUrl" placeholder="أدخل رابط الصورة">
+                                <button type="button" id="addImageBtn" class="btn-secondary">إضافة</button>
+                            </div>
+                            <div class="image-previews" id="imagePreviews">
+                                <!-- Image previews will be loaded dynamically -->
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-section">
+                        <h3>المواصفات</h3>
+                        <div class="specifications-container" id="specificationsContainer">
+                            <div class="spec-row">
+                                <div class="form-group">
+                                    <input type="text" placeholder="اسم المواصفة" class="spec-name">
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" placeholder="قيمة المواصفة" class="spec-value">
+                                </div>
+                                <button type="button" class="remove-spec-btn"><i class="fas fa-trash"></i></button>
+                            </div>
+                        </div>
+                        <button type="button" id="addSpecBtn" class="add-spec-btn">
+                            <i class="fas fa-plus"></i>
+                            إضافة مواصفة
+                        </button>
+                    </div>
+                    
+                    <div class="form-actions">
+                        <button type="submit" class="btn-primary">
+                            <i class="fas fa-save"></i>
+                            حفظ المنتج
+                        </button>
+                        <button type="button" id="cancelProductBtn" class="btn-secondary">
+                            <i class="fas fa-times"></i>
+                            إلغاء
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Order Details Modal -->
+    <div id="orderModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>تفاصيل الطلب #<span id="orderDetailId"></span></h2>
+                <button class="modal-close">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div id="orderDetail">
+                    <!-- Order details will be loaded dynamically -->
+                </div>
+                
+                <div class="form-actions">
+                    <button type="button" id="updateOrderStatusBtn" class="btn-primary">
+                        <i class="fas fa-save"></i>
+                        تحديث الحالة
+                    </button>
+                    <button type="button" id="closeOrderBtn" class="btn-secondary">
+                        <i class="fas fa-times"></i>
+                        إغلاق
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Delete Confirmation Modal -->
+    <div id="deleteConfirmModal" class="modal">
+        <div class="modal-content small-modal">
+            <div class="modal-header">
+                <h2>تأكيد الحذف</h2>
+                <button class="modal-close">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p>هل أنت متأكد من حذف هذا المنتج؟ لا يمكن التراجع عن هذا الإجراء.</p>
+                
+                <div class="form-actions">
+                    <button type="button" id="confirmDeleteBtn" class="btn-danger">
+                        <i class="fas fa-trash"></i>
+                        نعم، حذف
+                    </button>
+                    <button type="button" id="cancelDeleteBtn" class="btn-secondary">
+                        <i class="fas fa-times"></i>
+                        إلغاء
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Notification -->
+    <div class="notification" id="notification">
+        <div class="notification-content">
+            <i class="notification-icon"></i>
+            <span class="notification-message"></span>
+        </div>
+        <button class="notification-close"><i class="fas fa-times"></i></button>
+    </div>
+    
+    <script src="main.js"></script>
+</body>
+</html>
